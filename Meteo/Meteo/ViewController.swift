@@ -47,6 +47,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return towns.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let town = towns[indexPath.row]
+        
+        self.performSegue(withIdentifier: "SegueToDetail", sender: town)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let town: Town = sender as! Town
+        if segue.identifier == "SegueToDetail" {
+            if let toViewController = segue.destination as? DetailViewController {
+                toViewController.detailTown = town
+            }
+        }
+    }
+    
     @IBAction func addNewTown(_ sender: Any) {
         let alertController = UIAlertController(title: "Ajouter une nouvelle ville", message: nil, preferredStyle: .alert)
     

@@ -19,6 +19,7 @@
 		C55D58481FB9ABF40001482F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55D58431FB9ABE40001482F /* SwiftyJSON.framework */; };
 		C55D58491FB9ABF40001482F /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C55D58431FB9ABE40001482F /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C55D584B1FB9B1B40001482F /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D584A1FB9B1B40001482F /* Town.swift */; };
+		C55D584D1FB9C11A0001482F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D584C1FB9C11A0001482F /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		C55D58411FB9ABDC0001482F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		C55D58431FB9ABE40001482F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = SOURCE_ROOT; };
 		C55D584A1FB9B1B40001482F /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
+		C55D584C1FB9C11A0001482F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				C55D582E1FB9A0AC0001482F /* AppDelegate.swift */,
 				C55D58301FB9A0AC0001482F /* ViewController.swift */,
+				C55D584C1FB9C11A0001482F /* DetailViewController.swift */,
 				C55D584A1FB9B1B40001482F /* Town.swift */,
 				C55D58321FB9A0AC0001482F /* Main.storyboard */,
 				C55D58351FB9A0AC0001482F /* Assets.xcassets */,
@@ -180,6 +183,7 @@
 				C55D584B1FB9B1B40001482F /* Town.swift in Sources */,
 				C55D58311FB9A0AC0001482F /* ViewController.swift in Sources */,
 				C55D582F1FB9A0AC0001482F /* AppDelegate.swift in Sources */,
+				C55D584D1FB9C11A0001482F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
