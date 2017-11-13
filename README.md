@@ -13,13 +13,24 @@ Température, Condition météorologique
 ville, Température, Condition météorologique
 Requis :
 ● Développement en Swift 3
+
 ● Versions supportées : iOS 9 et plus
+
 ● Gestion d’erreurs (Prévoir le cas où l’utilisateur fait mauvaise saisie d’un nom de ville)
+
 ● Utiliser AutoLayout
+
 Bonus (non obligatoire):
+
 ● Gestion de la persistance des données (CoreData, Realm...)
+
 ● Ajouter une action supprimer dans la liste au swipe sur la cellule
+
 ● Une app avec un beau design est un plus !
+
 Astuces :
+
 ● API Meteo :   https://openweathermap.org/appid
+
 ● Librairies qui pourrait vous aider : Alamofire, SwiftyJSON
+
