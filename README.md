@@ -12,25 +12,15 @@ Température, Condition météorologique
 5. Lorsque l’utilisateur clique sur une ville, afficher une nouvelle page avec :  Nom de la
 ville, Température, Condition météorologique
 Requis :
-● Développement en Swift 3
-
-● Versions supportées : iOS 9 et plus
-
-● Gestion d’erreurs (Prévoir le cas où l’utilisateur fait mauvaise saisie d’un nom de ville)
-
-● Utiliser AutoLayout
-
+1. Développement en Swift 3
+2. Versions supportées : iOS 9 et plus
+3. Gestion d’erreurs (Prévoir le cas où l’utilisateur fait mauvaise saisie d’un nom de ville)
+4. Utiliser AutoLayout
 Bonus (non obligatoire):
-
-● Gestion de la persistance des données (CoreData, Realm...)
-
-● Ajouter une action supprimer dans la liste au swipe sur la cellule
-
-● Une app avec un beau design est un plus !
-
+1. Gestion de la persistance des données (CoreData, Realm...)
+2. Ajouter une action supprimer dans la liste au swipe sur la cellule
+3. Une app avec un beau design est un plus !
 Astuces :
-
-● API Meteo :   https://openweathermap.org/appid
-
-● Librairies qui pourrait vous aider : Alamofire, SwiftyJSON
+1. API Meteo :   https://openweathermap.org/appid
+2. Librairies qui pourrait vous aider : Alamofire, SwiftyJSON
 
