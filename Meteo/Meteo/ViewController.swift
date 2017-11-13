@@ -89,8 +89,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.townTableView.reloadData()
     }
     
+    static let apiUrl : String = "http://api.openweathermap.org/data/2.5/"
+    static let APPID : String = "011728ceb26f2404312ed3a3e95effdb"
+    static let units : String = "metric"
+    static let lang : String = "fr"
+    
     func requestMeteoInformation(townName: String)  {
-        let url = "http://api.openweathermap.org/data/2.5/weather?q=\(townName)&APPID=011728ceb26f2404312ed3a3e95effdb&units=metric&lang=fr"
+        let url = "\(ViewController.apiUrl)weather?q=\(townName)&APPID=\(ViewController.APPID)&units=\(ViewController.units)&lang=\(ViewController.lang)"
         
         Alamofire.request(url).responseJSON { response in
             switch response.result {
@@ -102,13 +107,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.setup()
                 }
                 else {
-                    print("Une erreur c'est produite")
+                    self.showError()
                 }
             case .failure(let error):
                 print(error)
+                self.showError()
             }
         }
     }
+    
+    func showError() {
+        let alertController = UIAlertController(title: "Attention", message: "Une erreur c'est produite", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     
 }
 
