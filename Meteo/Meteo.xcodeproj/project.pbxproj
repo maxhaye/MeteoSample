@@ -12,7 +12,29 @@
 		C55D58341FB9A0AC0001482F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55D58321FB9A0AC0001482F /* Main.storyboard */; };
 		C55D58361FB9A0AC0001482F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C55D58351FB9A0AC0001482F /* Assets.xcassets */; };
 		C55D58391FB9A0AC0001482F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55D58371FB9A0AC0001482F /* LaunchScreen.storyboard */; };
+		C55D58421FB9ABDC0001482F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55D58411FB9ABDC0001482F /* Alamofire.framework */; };
+		C55D58441FB9ABE40001482F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55D58431FB9ABE40001482F /* SwiftyJSON.framework */; };
+		C55D58451FB9ABEE0001482F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55D58411FB9ABDC0001482F /* Alamofire.framework */; };
+		C55D58461FB9ABEE0001482F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C55D58411FB9ABDC0001482F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C55D58481FB9ABF40001482F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55D58431FB9ABE40001482F /* SwiftyJSON.framework */; };
+		C55D58491FB9ABF40001482F /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C55D58431FB9ABE40001482F /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C55D584B1FB9B1B40001482F /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D584A1FB9B1B40001482F /* Town.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C55D58471FB9ABEE0001482F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C55D58491FB9ABF40001482F /* SwiftyJSON.framework in Embed Frameworks */,
+				C55D58461FB9ABEE0001482F /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C55D582B1FB9A0AC0001482F /* Meteo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meteo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +44,9 @@
 		C55D58351FB9A0AC0001482F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C55D58381FB9A0AC0001482F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C55D583A1FB9A0AC0001482F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C55D58411FB9ABDC0001482F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		C55D58431FB9ABE40001482F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = SOURCE_ROOT; };
+		C55D584A1FB9B1B40001482F /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55D58481FB9ABF40001482F /* SwiftyJSON.framework in Frameworks */,
+				C55D58441FB9ABE40001482F /* SwiftyJSON.framework in Frameworks */,
+				C55D58451FB9ABEE0001482F /* Alamofire.framework in Frameworks */,
+				C55D58421FB9ABDC0001482F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +85,23 @@
 			children = (
 				C55D582E1FB9A0AC0001482F /* AppDelegate.swift */,
 				C55D58301FB9A0AC0001482F /* ViewController.swift */,
+				C55D584A1FB9B1B40001482F /* Town.swift */,
 				C55D58321FB9A0AC0001482F /* Main.storyboard */,
 				C55D58351FB9A0AC0001482F /* Assets.xcassets */,
 				C55D58371FB9A0AC0001482F /* LaunchScreen.storyboard */,
 				C55D583A1FB9A0AC0001482F /* Info.plist */,
+				C55D58401FB9ABC20001482F /* Framework */,
 			);
 			path = Meteo;
+			sourceTree = "<group>";
+		};
+		C55D58401FB9ABC20001482F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				C55D58431FB9ABE40001482F /* SwiftyJSON.framework */,
+				C55D58411FB9ABDC0001482F /* Alamofire.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +114,7 @@
 				C55D58271FB9A0AC0001482F /* Sources */,
 				C55D58281FB9A0AC0001482F /* Frameworks */,
 				C55D58291FB9A0AC0001482F /* Resources */,
+				C55D58471FB9ABEE0001482F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55D584B1FB9B1B40001482F /* Town.swift in Sources */,
 				C55D58311FB9A0AC0001482F /* ViewController.swift in Sources */,
 				C55D582F1FB9A0AC0001482F /* AppDelegate.swift in Sources */,
 			);
@@ -276,6 +318,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3GG49WV2NB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Meteo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -292,6 +338,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3GG49WV2NB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Meteo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
