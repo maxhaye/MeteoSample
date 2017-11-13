@@ -37,6 +37,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let town: Town = sender as! Town
+        if segue.identifier == "SegueToDetail" {
+            if let toViewController = segue.destination as? DetailViewController {
+                toViewController.detailTown = town
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TownCell", for: indexPath)
         let town = towns[indexPath.row]
@@ -68,15 +77,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let town = towns[indexPath.row]
         
         self.performSegue(withIdentifier: "SegueToDetail", sender: town)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let town: Town = sender as! Town
-        if segue.identifier == "SegueToDetail" {
-            if let toViewController = segue.destination as? DetailViewController {
-                toViewController.detailTown = town
-            }
-        }
     }
     
     @IBAction func addNewTown(_ sender: Any) {
