@@ -17,18 +17,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         townTableView.delegate = self
         townTableView.dataSource = self
+        townTableView.allowsMultipleSelectionDuringEditing = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setup()
+        
+        towns = [Town]()
+        let townList : [String] = UserDefaults.standard.object(forKey: "townList") as! [String]
+        for townName in townList {
+            self.requestMeteoInformation(townName: townName)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,6 +43,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = (" \(town.name) : \(town.temperature)°C , \(town.localInformation)")
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            self.towns.remove(at: indexPath.row)
+            self.setup()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -86,7 +103,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func setup() {
+        
         self.townTableView.reloadData()
+        var townList = [String]()
+        for town in towns {
+            townList.append(town.name)
+        }
+        UserDefaults.standard.set(townList, forKey: "townList")
+        
     }
     
     static let apiUrl : String = "http://api.openweathermap.org/data/2.5/"
@@ -124,7 +148,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
+
 }
+
+
 

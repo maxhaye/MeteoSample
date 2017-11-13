@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        if (UserDefaults.standard.object(forKey: "townList") == nil) {
+            UserDefaults.standard.set([String](), forKey: "townList")
+        }
         // Override point for customization after application launch.
         return true
     }
